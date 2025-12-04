@@ -1,4 +1,4 @@
-local Library = {};
+getgenv().Library = {};
 local Font_Old = Enum.Font.GothamBold
 local Path = game:GetService("RunService"):IsStudio() and game.Players.LocalPlayer.PlayerGui or game.CoreGui
 local Tick = tick() 
