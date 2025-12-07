@@ -3889,7 +3889,7 @@ do -- Library
 	end
 end;
 
-local Notifications = {Notifs = {}};
+getgenv().Notifications = {Notifs = {}};
 do 
     local NotificationGui = Instance.new("ScreenGui", Path)
     NotificationGui.Name = "ScreenGui"
