@@ -659,7 +659,7 @@ do -- Library
 			};
 			
 			local FentFun = Instance.new("ScreenGui", Path)
-			FentFun.Name = "fent.fun"
+			FentFun.Name = "avohook.xyz"
 			FentFun.DisplayOrder = 1000
 			FentFun.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
