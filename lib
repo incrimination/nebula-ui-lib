@@ -695,7 +695,7 @@ do -- Library
 
 			local Logo = Library:NewInstance("ImageLabel", true)
 			Logo.Name = "Logo"
-			Logo.Image = "http://www.roblox.com/asset/?id=140308041485162"
+			Logo.Image = "http://www.roblox.com/asset/?id=133462122747220"
 			Logo.ScaleType = Enum.ScaleType.Fit
 			Logo.AnchorPoint = Vector2.new(0, 0.5)
 			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -703,7 +703,7 @@ do -- Library
 			Logo.ImageColor3 = Library.Accent
 			Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Logo.BorderSizePixel = 0
-			Logo.Position = UDim2.new(0.3, 0, 0.5, 0)
+			Logo.Position = UDim2.new(0.3, 2, 0.5, 0)
 			Logo.Size = UDim2.new(0, 45, 0, 45)
 			Logo.Parent = TopFrame
 
@@ -723,7 +723,7 @@ do -- Library
 			CheatTitle.TextXAlignment = Enum.TextXAlignment.Left
 			CheatTitle.Parent = TopFrame
 
-			--[[local Test = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players").LocalPlayer.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
+			local Test = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players").LocalPlayer.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 			
 			local dihcheese = Instance.new("ImageLabel")
 			dihcheese.BackgroundColor3 = Library.Accent
@@ -737,7 +737,7 @@ do -- Library
 
 			local uic = Instance.new("UICorner")
 			uic.CornerRadius = UDim.new(8, 8)
-			uic.Parent = dihcheese]]
+			uic.Parent = dihcheese
 
 			TopFrame.Parent = MainFrame
 
