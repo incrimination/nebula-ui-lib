@@ -695,7 +695,7 @@ do -- Library
 
 			local Logo = Library:NewInstance("ImageLabel", true)
 			Logo.Name = "Logo"
-			Logo.Image = "http://www.roblox.com/asset/?id=17655988165"
+			Logo.Image = "http://www.roblox.com/asset/?id=140308041485162"
 			Logo.ScaleType = Enum.ScaleType.Fit
 			Logo.AnchorPoint = Vector2.new(0, 0.5)
 			Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -703,9 +703,41 @@ do -- Library
 			Logo.ImageColor3 = Library.Accent
 			Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Logo.BorderSizePixel = 0
-			Logo.Position = UDim2.new(0, 5, 0.5, 0)
-			Logo.Size = UDim2.new(0, 20, 0, 20)
+			Logo.Position = UDim2.new(0.3, 0, 0.5, 0)
+			Logo.Size = UDim2.new(0, 45, 0, 45)
 			Logo.Parent = TopFrame
+
+			local CheatTitle = Library:NewInstance("TextLabel", true)
+			CheatTitle.Name = "CheatTitle"
+			CheatTitle.Position = UDim2.new(0.3, 35, 0, -6)
+			CheatTitle.Size = UDim2.new(0.45, 0, 0, 40)
+			CheatTitle.TextColor3 = Color3.fromRGB(200, 200, 200)
+			CheatTitle.TextWrapped = true
+			CheatTitle.TextScaled = false
+			CheatTitle.BorderSizePixel = 0
+			CheatTitle.TextStrokeTransparency = 0
+			CheatTitle.TextSize = 14
+			CheatTitle.BackgroundTransparency = 1
+			CheatTitle.FontFace = menu_font
+			CheatTitle.Text = AvoHook.Title
+			CheatTitle.TextXAlignment = Enum.TextXAlignment.Left
+			CheatTitle.Parent = TopFrame
+
+			local Test = game.Players:GetUserThumbnailAsync(game.Players.LocalPlayer.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
+			
+			local dihcheese = Instance.new("ImageLabel")
+			dihcheese.BackgroundColor3 = Library.Accent
+			dihcheese.Name = "dihcheese"
+			dihcheese.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			dihcheese.BorderSizePixel = 1
+			dihcheese.Size = UDim2.new(0, 25, 0, 25)
+			dihcheese.Image = Test
+			dihcheese.Position = UDim2.new(0.95, 0, 0, 1)
+			dihcheese.Parent = TopFrame
+
+			local uic = Instance.new("UICorner")
+			uic.CornerRadius = UDim.new(8, 8)
+			uic.Parent = dihcheese
 
 			TopFrame.Parent = MainFrame
 
@@ -4049,3 +4081,15 @@ do
 end
 
 Notifications:Notification("Loaded cheat in approximately: " .. math.floor(tick() - Tick) .. " seconds", 5, Library.Accent, false)
+
+local Window = Library:Window({})
+
+local Pages = {
+	["Ragebot"] = Window:Page({Name = "Ragebot", Icon = "rbxassetid://6034509987"});
+	["Anti-Aim"] = Window:Page({Name = "Anti Aim", Icon = "rbxassetid://17134553802"});
+	["Visuals"] = Window:Page({Name = "Visuals", Icon = "rbxassetid://6031079158"});
+	["LocalPlayer"] = Window:Page({Name = "LocalPlayer", Icon = "rbxassetid://6034281935"});
+	["World"] = Window:Page({Name = "World", Icon = "rbxassetid://6026568213"});
+	["Misc"] = Window:Page({Name = "Misc", Icon = "rbxassetid://6031280883"});
+	["Settings"] = Window:Page({Name = "Settings", Icon = "rbxassetid://6031280882"});
+}
