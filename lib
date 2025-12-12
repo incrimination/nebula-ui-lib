@@ -1,34 +1,3 @@
-local Env = getgenv()
-
-Env._DEV = true -- Debugging toggle
-Env._ALPHA = true -- Alpha features toggle
-
-Env.AvoHook = {}
-
-function AvoHook:getusername()
-	local display, userid = game:GetService("Players").LocalPlayer.DisplayName, tostring(game:GetService("Players").LocalPlayer.UserId)
-	return display, userid
-end
-
-function AvoHook:getavohookbuild()
-	if _DEV then 
-		return "dev"
-	elseif _ALPHA then -- dev overrides alpha, if dev and alpha are both on, func will return dev anyways, so alpha will only ever actually get passed if dev is off while alpha is on
-		return "alpha"
-	end 
-
-	return "live"
-end
-
-local display, userid = AvoHook:getusername()
-local avohookbuild = AvoHook:getavohookbuild()
-
-AvoHook = {
-	Title = 'voHook Recode (User: ' .. display .. " (" .. userid .. "), Build: " .. avohookbuild .. ')',
-}
-
-print(AvoHook.Title)
-
 getgenv().Library = {};
 local Font_Old = Enum.Font.GothamBold
 local Path = game:GetService("RunService"):IsStudio() and game.Players.LocalPlayer.PlayerGui or game.CoreGui
@@ -754,7 +723,7 @@ do -- Library
 			CheatTitle.TextXAlignment = Enum.TextXAlignment.Left
 			CheatTitle.Parent = TopFrame
 
-			local Test = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players").LocalPlayer.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
+			--[[local Test = game:GetService("Players"):GetUserThumbnailAsync(game:GetService("Players").LocalPlayer.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 			
 			local dihcheese = Instance.new("ImageLabel")
 			dihcheese.BackgroundColor3 = Library.Accent
@@ -768,7 +737,7 @@ do -- Library
 
 			local uic = Instance.new("UICorner")
 			uic.CornerRadius = UDim.new(8, 8)
-			uic.Parent = dihcheese
+			uic.Parent = dihcheese]]
 
 			TopFrame.Parent = MainFrame
 
